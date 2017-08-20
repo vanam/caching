@@ -48,7 +48,6 @@ class SQLiteJournal implements IJournal
 		$this->pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		$this->pdo->exec('
 			PRAGMA foreign_keys = OFF;
-			PRAGMA journal_mode = WAL;
 			CREATE TABLE IF NOT EXISTS tags (
 				key BLOB NOT NULL,
 				tag BLOB NOT NULL
